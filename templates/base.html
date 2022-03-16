@@ -1,24 +1,47 @@
+
+
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GestoPers</title>
+    <link rel="stylesheet"  href="app.css">
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <header id="entete">
-        <h1>GestoPers</h1>
-        <nav class="navigation">
-            <ul>
+        <h1 id="titre">GestoPers</h1>
+        
+        <nav>
+            <ul id="nav">
                 <li> <a href="#">Accueil</a> </li>
                 <li> <a href="#">Ajouter</a> </li>
                 <li> <a href="#">Statistique</a> </li>
             </ul>
+
+            <div class="menuBurger">
+                <div class="btnBurger"></div>
+            </div>
         </nav>
     </header>
 
-    <footer id="pied">
+    <main>
+        <!-- <span class="material-icons" id="buttonRecherche">search</span> -->
 
+        <div class="menu-btn">
+            <div class="menu-btn__burger"></div>
+        </div>
+
+    </main>
+
+    <footer id="pied">
+        <p>
+            <i class="fas fa-code"></i> with ❤ by Sangohan
+        </p>
     </footer>
+    
+    <script src="main.js"></script>
 </body>
 </html>
