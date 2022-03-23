@@ -1,4 +1,4 @@
-
+{% load static %}
 
 <html lang="fr">
 <head>
@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GestoPers</title>
-    <link rel="stylesheet"  href="app.css">
+    <link rel="stylesheet" type= "text/css" href="{% static 'css/app.css' %}">
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+    {% comment %} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> {% endcomment %}
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -17,8 +19,9 @@
         <nav>
             <ul id="nav">
                 <li> <a href="#">Accueil</a> </li>
-                <li> <a href="#">Ajouter</a> </li>
+                <li> <a href="{% url 'ajouterPersonnel' %}">Ajouter</a> </li>
                 <li> <a href="#">Statistique</a> </li>
+                <li> <a href="#">Deconnexion</a> </li>
             </ul>
 
             <div class="menuBurger">
@@ -28,12 +31,11 @@
     </header>
 
     <main>
-        <!-- <span class="material-icons" id="buttonRecherche">search</span> -->
+        
+        {% block content %}
 
-        <div class="menu-btn">
-            <div class="menu-btn__burger"></div>
-        </div>
-
+        {% endblock content %}
+    
     </main>
 
     <footer id="pied">
@@ -42,6 +44,6 @@
         </p>
     </footer>
     
-    <script src="main.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

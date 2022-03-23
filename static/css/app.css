@@ -12,6 +12,8 @@ main{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    color: whitesmoke;
+    flex-direction: column;
 }
 
 ul{
@@ -79,6 +81,10 @@ nav{
     display: none;
 }
 
+body{
+    display: block;
+}
+
 .btnBurger{
     width: 40px;
     height: 5px;
@@ -120,11 +126,27 @@ nav{
 
 /* Fin */
 
+footer{
+    background: #ffb74d;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-@media only screen and (max-width : 680px) {
+
+@media only screen and (max-width : 930px) {
 
     header{
         position: fixed;
+    }
+
+    main{
+        min-height: auto;
     }
 
     .menuBurger{
@@ -157,20 +179,34 @@ nav{
     nav ul li a:active {
         color: whitesmoke;
     }
+
+    footer{
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
 }
 
 .material-icons{
     color: black;
 }
 
-footer{
-    background: #ffb74d;
-    width: 100%;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.btnCommencer{
+    display: block;
+    background-color: #ffb74d;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 16px;
+    padding: 12px;
+    width: 150px;
+    cursor: pointer;
+    margin-top: 60px;
+    margin-bottom: 20px;
+
+}
+
+.btnCommencer:hover{
+    background-color: #008037;
+    color: white;
 }
