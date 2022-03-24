@@ -54,6 +54,11 @@ li, a{
     text-decoration: none;
 }
 
+main a{
+    font-weight: 400;
+    font-size: medium;
+}
+
 li{
     display: inline-block;
     font-size: 18px;
@@ -196,19 +201,29 @@ footer{
 .btnCommencer{
     display: block;
     background-color: #ffb74d;
+    border-color: #ffb74d;
     border-radius: 3px;
     text-align: center;
     font-size: 16px;
     padding: 12px;
     width: 150px;
+    margin: auto;
     cursor: pointer;
     margin-top: 60px;
-    margin-bottom: 20px;
-
 }
 
 .btnCommencer:hover{
     background-color: #008037;
+    border-color: #008037;
     color: white;
 }
 
+main h2{
+    padding: 20px;
+}
+
+.option{
+    font-size: 14px;
+    margin: 15px;
+    border-bottom: 2px solid #008037;
+}

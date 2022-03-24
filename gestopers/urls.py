@@ -1,6 +1,7 @@
-from unicodedata import name
-from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.contrib import admin
+from django.conf.urls.static import static
 from django.contrib.auth.views import LoginView, LogoutView
 import authentification.views
 import gestion.views
@@ -18,5 +19,8 @@ urlpatterns = [
     path('ajouter/Personnel/', authentification.views.page_ajout_personnel, name='ajouterPersonnel'),
     path('ajouter/Departement/', authentification.views.page_ajout_departement, name='ajouterDepartement'),
     path('departement/<slug:departement_nom>', gestion.views.page_departement, name='departement'),
-    path('departement/<int:personnel_id>', gestion.views.page_personnel, name='personnel'),
+    path('personnel/<int:personnel_id>', gestion.views.page_personnel, name='personnel'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

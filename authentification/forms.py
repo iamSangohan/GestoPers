@@ -21,3 +21,6 @@ class AjouterDepartement(forms.ModelForm):
     class Meta:
         model = models.Departement
         fields = '__all__'
+        
+class SupprimerDepartement(forms.Form):
+    supDepart = forms.BooleanField(initial=True)
