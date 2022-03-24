@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="parent">
+        <div class="div1">
+            <h2>{{ departement.nomDepartement }}</h2>
+        </div>
+        <div class="div2">
+            <table>
+                <tr>
+                    <th>#</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                </tr>
+                
+                {% for elt in personnel %}
+                <tr>
+                    <td>{{ elt.id }}</td>
+                    <td>{{ elt.nom }}</td>
+                    <td>{{ elt.prenom }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock content %}

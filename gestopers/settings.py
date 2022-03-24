@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'authentification',
+    'gestion',
 ]
 
 MIDDLEWARE = [
@@ -137,3 +138,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'authentification.User'
 
 LOGIN_REDIRECT_URL = 'accueil'
+
+LOGOUT_REDIRECT_URL = 'connexion'
