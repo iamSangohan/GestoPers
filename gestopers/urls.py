@@ -1,3 +1,4 @@
+from unicodedata import name
 from django.urls import path
 from django.conf import settings
 from django.contrib import admin
@@ -18,8 +19,9 @@ urlpatterns = [
     path('ajouter/', authentification.views.page_ajout, name='ajouter'),
     path('ajouter/Personnel/', authentification.views.page_ajout_personnel, name='ajouterPersonnel'),
     path('ajouter/Departement/', authentification.views.page_ajout_departement, name='ajouterDepartement'),
-    path('departement/<slug:departement_nom>', gestion.views.page_departement, name='departement'),
+    path('departement/<str:departement_nom>', gestion.views.page_departement, name='departement'),
     path('personnel/<int:personnel_id>', gestion.views.page_personnel, name='personnel'),
+    path('statistique/', gestion.views.dashboard, name='dashboard')
 ]
 
 if settings.DEBUG:

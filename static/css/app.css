@@ -17,9 +17,10 @@ main{
     /* justify-content: center; */
     /* align-items: center; */
     min-height: 100vh;
-    width: 1000px;
+    max-width: 1000px;
     margin: auto;
     margin-top: 150px;
+    margin-bottom: 75px;
     color: whitesmoke;
     flex-direction: column;
     text-align: center;
@@ -27,6 +28,7 @@ main{
 
 ul{
     list-style: none;
+    margin-bottom: 0px;
 }
 
 header{
@@ -39,6 +41,7 @@ header{
     justify-content: space-between;
     align-items: center;
     display: flex;
+    z-index: 2;
 }
 
 #titre{
@@ -51,7 +54,7 @@ li, a{
     font-weight: 600;
     font-size: 18;
     color: black;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 main a{
@@ -226,4 +229,22 @@ main h2{
     font-size: 14px;
     margin: 15px;
     border-bottom: 2px solid #008037;
+}
+
+/* For statistique */
+.my-card:hover{
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+}
+
+.col-md-8 {
+    margin: auto !important;
+}
+
+.bg-info {
+    background-color: #008037 !important;
+}
+
+.col-md-4, .col-md-8{
+    margin-bottom: 15px;
 }

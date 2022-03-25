@@ -1,5 +1,5 @@
 from authentification import models
-from authentification.models import Personnel
+from authentification.models import Departement, Personnel
 from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth.decorators import login_required
 
@@ -7,7 +7,6 @@ from django.contrib.auth.decorators import login_required
 @login_required
 def page_accueil(request):
     personnel = Personnel.objects.all()
-    
     return render(request, 'gestion/accueil.html', {'liste': personnel})
 
 def page_departement(request, departement_nom):
@@ -18,3 +17,17 @@ def page_departement(request, departement_nom):
 def page_personnel(request, personnel_id):
     pers = get_object_or_404(models.Personnel, id=personnel_id)
     return render(request, 'gestion/personnel.html', {'personnel': pers})
+
+@login_required
+def dashboard(request):
+    departements = Departement.objects.all()
+    nbDepart = departements.count()
+    personnels = Personnel.objects.all()
+    nbPerso = personnels.count()
+    context = {
+        'departements': departements,
+        'nbDepart': nbDepart,
+        'personnels': personnels,
+        'nbPerso': nbPerso
+    }
+    return render(request, 'dashboard/index.html', context)
