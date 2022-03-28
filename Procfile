@@ -1,0 +1,1 @@
+web: gunicorn gestopers.wsgi --log-file -
