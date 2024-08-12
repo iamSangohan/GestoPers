@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Bienvenue sur la plateforme</h2>
+
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Département</th>
+        </tr>
+        
+        {% for elt in liste %}
+        
+        <tr>
+            <td>{{ elt.id }}</td>
+            <td><a href="{% url 'personnel' elt.id %}">{{ elt.nom }}</a></td>
+            <td>{{ elt.prenom }}</td>
+            <td><a href="{% url 'departement' elt.departement.nomDepartement %}">{{ elt.departement.nomDepartement }}</a></td>
+        </tr>
+        
+        {% endfor %}
+    </table>
+{% endblock content %}

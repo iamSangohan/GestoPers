@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <h2>Que voulez-vous ajouter ?</h2>
+
+    <section>
+        <div class="fiche">
+            <a href="{% url 'ajouterPersonnel'%}">
+                <img src="{% static 'images/personnel.jpg' %}" alt="Personnel d'une entreprise">
+                <button>Ajouter personnel</button>
+            </a>
+        </div>
+        <div class="fiche">
+            <a href="{% url 'ajouterDepartement'%}">
+                <img src="{% static 'images/departement.jpg' %}" alt="Departement d'une entreprise">
+                <button>Ajouter département</button>
+            </a>
+        </div>
+    </section>
+{% endblock content %}
